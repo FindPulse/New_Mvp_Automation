@@ -1,0 +1,6 @@
+{
+  "name": "tire-platform-frontend-placeholder",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Placeholder for future React/TypeScript approval dashboard. Current UI is Streamlit."
+}
