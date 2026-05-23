@@ -24,7 +24,11 @@ def apply_product_edits(drafts: list[ProductDraft], edits: Mapping[str, Mapping[
     return updated
 
 
-def set_approval_status(drafts: list[ProductDraft], approved_skus: set[str], rejected_skus: set[str]) -> list[ProductDraft]:
+def set_approval_status(
+    drafts: list[ProductDraft],
+    approved_skus: set[str],
+    rejected_skus: set[str],
+) -> list[ProductDraft]:
     updated = deepcopy(drafts)
     for draft in updated:
         if draft.sku in rejected_skus:
