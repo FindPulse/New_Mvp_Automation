@@ -77,7 +77,7 @@ def lookup_skus_in_wheel_library(
     with get_postgres_connection(db_url) as conn:
         with conn.cursor() as cur:
             for start in range(0, len(sku_list), chunk_size):
-                chunk = sku_list[start : start + chunk_size]
+                chunk = sku_list[start: start + chunk_size]
                 cur.execute(query, (chunk,))
                 for row in cur.fetchall():
                     rows.append(dict(zip(LIBRARY_COLUMNS, row)))
